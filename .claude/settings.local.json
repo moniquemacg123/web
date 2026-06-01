@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node screenshot.mjs http://localhost:3000 desktop)",
+      "Bash(node screenshot.mjs http://localhost:3000 desktop2)",
+      "Bash(node -e \"const fs=require\\(''fs''\\); const d=fs.readFileSync\\(''c:/Users/moniq/OneDrive/Documents/Claude Project/brand_assets/logo-blue-500x500.png''\\); console.log\\(''data:image/png;base64,''+d.toString\\(''base64''\\)\\);\")"
+    ]
+  }
+}

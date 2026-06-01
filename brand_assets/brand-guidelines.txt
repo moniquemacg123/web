@@ -1,0 +1,10 @@
+Colors
+
+blue #170DF2
+purple #AFACFB
+pink #FFADFF
+light pink #FFEBFF
+
+text color #000000
+
+font-family:Arial,Helvetica,sans-serif;

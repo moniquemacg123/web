@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marketing Operations Projects | Monique MacGillivray</title>
+  
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B1ME0HWV81"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B1ME0HWV81');
+</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'b-blue': '#170DF2',
+            'b-purple': '#AFACFB',
+            'b-pink': '#FFADFF',
+            'b-lpink': '#FFEBFF',
+          },
+          fontFamily: {
+            display: ['Quicksand', 'Arial', 'sans-serif'],
+            body: ['DM Sans', 'Arial', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', Arial, sans-serif;
+      color: #000;
+      background: #fff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Nav link underline effect ── */
+    .nav-link {
+      position: relative;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #111;
+      text-decoration: none;
+      letter-spacing: 0.01em;
+      transition: color 0.2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1.5px;
+      background: #170DF2;
+      transition: width 0.25s ease;
+    }
+    .nav-link:hover { color: #170DF2; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* ── Scrolled nav ── */
+    nav.scrolled {
+      background: rgba(255,255,255,255);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      box-shadow: 0 1px 0 rgba(0,0,0,0);
+    }
+
+    /* ── Buttons ── */
+    .btn-blue {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #170DF2; color: #fff;
+      font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.9375rem;
+      padding: 14px 28px; border-radius: 100px; text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      box-shadow: 0 4px 24px rgba(23,13,242,0.28);
+      border: none; cursor: pointer;
+    }
+    .btn-blue:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(23,13,242,0.38); background: #0d09c2; }
+    .btn-blue:active { transform: translateY(0); }
+    .btn-blue:focus-visible { outline: 3px solid #AFACFB; outline-offset: 3px; }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #170DF2;
+      font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 0.9375rem;
+      padding: 13px 28px; border-radius: 100px;
+      border: 1.5px solid #170DF2; text-decoration: none;
+      transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+      cursor: pointer;
+    }
+    .btn-outline:hover { background: #FFEBFF; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(23,13,242,0.1); }
+    .btn-outline:active { transform: translateY(0); }
+    .btn-outline:focus-visible { outline: 3px solid #AFACFB; outline-offset: 3px; }
+
+    /* ── Tag chip ── */
+    .chip {
+      display: inline-block;
+      font-family: 'DM Sans', sans-serif; font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 100px;
+      background: #FFEBFF; color: #170DF2;
+    }
+
+    /* ── Hero animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(-32deg); }
+      50%       { transform: translateY(-14px) rotate(-32deg); }
+    }
+    @keyframes floatDot {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-10px); }
+    }
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-6px); }
+    }
+
+    .anim-1 { animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.05s both; }
+    .anim-2 { animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.18s both; }
+    .anim-3 { animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.32s both; }
+    .anim-4 { animation: fadeUp 0.65s cubic-bezier(0.22,1,0.36,1) 0.46s both; }
+    .anim-5 { animation: fadeIn  0.8s ease 0.25s both; }
+
+    .pill-float { animation: float 7s ease-in-out infinite; }
+    .dot-float  { animation: floatDot 5s ease-in-out infinite; }
+    .card-float { animation: floatCard 4s ease-in-out infinite; }
+
+    /* ── Scroll reveal ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(0.22,1,0.36,1), transform 0.7s cubic-bezier(0.22,1,0.36,1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── Cards ── */
+    .project-card {
+      background: #fff; border-radius: 20px; overflow: hidden;
+      border: 1px solid rgba(0,0,0,0.07);
+      transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 24px 64px rgba(23,13,242,0.13);
+    }
+    .project-card:focus-within { box-shadow: 0 0 0 3px #AFACFB; }
+
+    .service-card {
+      padding: 32px; border-radius: 20px; background: #fff;
+      border: 1px solid rgba(0,0,0,0.07);
+      transition: transform 0.25s cubic-bezier(0.22,1,0.36,1), box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 18px 52px rgba(23,13,242,0.1);
+      border-color: rgba(23,13,242,0.18);
+    }
+    .service-card.dark {
+      background: #170DF2;
+      border-color: #170DF2;
+    }
+    .service-card.dark:hover {
+      box-shadow: 0 18px 52px rgba(23,13,242,0.35);
+      border-color: #0d09c2;
+    }
+
+    /* ── Testimonial cards ── */
+    .testi-card {
+      padding: 36px; border-radius: 24px;
+      transition: transform 0.25s cubic-bezier(0.22,1,0.36,1);
+    }
+    .testi-card:hover { transform: translateY(-4px); }
+
+    /* ── Hamburger ── */
+    .hamburger span {
+      display: block; width: 22px; height: 2px;
+      background: #111; border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── Mobile menu ── */
+    .mobile-menu {
+      transform: translateY(-105%);
+      transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+    }
+    .mobile-menu.open { transform: translateY(0); }
+
+    /* ── Stat numbers ── */
+    .stat-num {
+      font-family: 'Quicksand', sans-serif; font-size: 2.75rem; font-weight: 800;
+      color: #170DF2; line-height: 1;
+    }
+
+    /* ── Contact section white button ── */
+    .btn-white {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: #fff; color: #170DF2;
+      font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 1rem;
+      padding: 16px 34px; border-radius: 100px; text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .btn-white:hover { transform: translateY(-2px); box-shadow: 0 10px 36px rgba(0,0,0,0.18); }
+    .btn-white:active { transform: translateY(0); }
+    .btn-white:focus-visible { outline: 3px solid rgba(255,255,255,0.6); outline-offset: 3px; }
+
+    .btn-ghost-white {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      background: rgba(255,255,255,0.1); color: #fff;
+      font-family: 'DM Sans', sans-serif; font-weight: 500; font-size: 1rem;
+      padding: 15px 34px; border-radius: 100px; text-decoration: none;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    .btn-ghost-white:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
+    .btn-ghost-white:active { transform: translateY(0); }
+    .btn-ghost-white:focus-visible { outline: 3px solid rgba(255,255,255,0.4); outline-offset: 3px; }
+
+    /* ── Divider ── */
+    .section-divider { border: none; border-top: 1px solid rgba(0,0,0,0.07); }
+
+    /* Image overlay */
+    .img-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(23,13,242,0.55) 0%, transparent 55%);
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     NAV
+══════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 px-6 lg:px-12">
+  <div class="max-w-6xl mx-auto flex items-center justify-between">
+
+    <!-- Logo -->
+    <a href="../index.html" class="block shrink-0" aria-label="Monique MacGillivray home">
+      <img src="../brand_assets/logo-blue-500x186.png" alt="Monique MacGillivray" class="h-9 w-auto">
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-9">
+      <a href="index.html"     class="nav-link">Work</a>
+      <a href="../index.html#about"    class="nav-link">About</a>
+      <a href="../index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+    </div>
+
+    <!-- Desktop CTA -->
+    <a href="#contact" class="hidden md:inline-flex btn-blue" style="padding:11px 22px; font-size:0.875rem;">
+      Let's Talk
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+        <path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+
+    <!-- Mobile hamburger -->
+    <button id="hamburger" class="hamburger md:hidden flex flex-col gap-[5px] p-2" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div id="mobileMenu" class="mobile-menu fixed top-0 left-0 right-0 z-40 bg-white pt-24 pb-10 px-6" aria-hidden="true">
+  <nav class="flex flex-col gap-1">
+    <a href="index.html"     class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Work</a>
+    <a href="../index.html#about"    class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">About</a>
+    <a href="../index.html#testimonials" class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Testimonials</a>
+    <a href="#contact"  class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+  </nav>
+  <a href="#contact" class="btn-blue mt-8 self-start" onclick="closeMobileMenu()">
+    Let's Talk
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+      <path d="M2 7h10M8 3l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </a>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section class="relative min-h-screen flex items-center pt-28 pb-20 px-6 lg:px-12 overflow-hidden bg-white">
+
+  <!-- Decorative bg blobs -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute; top:-120px; right:-100px; width:540px; height:540px; border-radius:50%; background:radial-gradient(circle, #FFEBFF 0%, transparent 68%); opacity:0.9;"></div>
+    <div style="position:absolute; bottom:-60px; left:-80px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, #AFACFB 0%, transparent 68%); opacity:0.18;"></div>
+    <!-- Subtle grid -->
+    <svg class="absolute inset-0 w-full h-full opacity-[0.025]" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+          <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#170DF2" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+    </svg>
+  </div>
+
+  <div class="max-w-6xl mx-auto w-full relative">
+    <div class="grid lg:grid-cols-[1fr_420px] gap-12 xl:gap-20 items-center">
+
+      <!-- LEFT: text -->
+      <div>
+        <!-- Badge -->
+        <div class="anim-1 inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full" style="background:#FFEBFF; border:1px solid rgba(255,173,255,0.4);">
+           <span class="w-2 h-2 rounded-full" style="background:#FFADFF; display:inline-block;"></span>
+          <span style="font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:600; color:#170DF2; letter-spacing:0.03em;">Project Examples</span>  
+        </div>
+
+        <!-- Headline -->
+        <h1 class="anim-2 font-display" style="font-family:'Quicksand',sans-serif; font-size:clamp(2.0rem, 4.5vw, 3.5rem); font-weight:600; line-height:1.04; letter-spacing:-0.03em; color:#000; margin-bottom:1.5rem;">
+        <span style="color:#170DF2;">Marketing</span> Operations</h1>
+
+        <!-- Sub -->
+        <p class="anim-3" style="font-family:'DM Sans',sans-serif; font-size:1.0625rem; line-height:1.75; color:#4a4a4a; max-width:480px; margin-bottom:2.5rem;">
+          <br>I have experience scaling enterprise marketing operations, leading cross-functional alignment, and driving revenue growth through MarTech strategy, and campaign performance analytics. 
+        </p>
+
+        <!-- CTAs -->
+        <div class="anim-4 flex flex-wrap gap-4 items-center">
+          <!-- <a href="#services" class="btn-blue">
+            View My Work
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+         <a href="#contact" class="btn-outline">Get in Touch</a>-->
+        </div>
+
+        <!-- Stats -->
+        <div class="anim-4 flex gap-10 mt-14 pt-10" style="border-top:1px solid rgba(0,0,0,0.08);">
+          <div>
+            <!--<div class="stat-num">15+</div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.875rem; color:#777; margin-top:4px;">Years Experience</div>-->
+          </div>
+          <div>
+            <!--   <div class="stat-num">50+</div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.875rem; color:#777; margin-top:4px;">Projects Completed</div>-->
+          </div>
+          <div>
+           <!-- <div class="stat-num">30+</div>
+            <div style="font-family:'DM Sans',sans-serif; font-size:0.875rem; color:#777; margin-top:4px;">Happy Clients</div>-->
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: visual card stack -->
+      <div class="anim-5 hidden lg:flex justify-center relative" style="height:500px;">
+
+        <!-- Back tilt card -->
+        <div style="position:absolute; inset:0; border-radius:28px; background:#FFEBFF; transform:rotate(4deg); top:16px; left:16px; right:-8px; bottom:-8px;"></div>
+
+        <!-- Main image card -->
+        <div style="position:relative; width:100%; border-radius:28px; overflow:hidden; border:1px solid rgba(23,13,242,0.08); background:#F4F3FF;">
+          <img src="../images/Tufin-MQL-crop.png" alt="graphic of MQL chart" style="width:100%; height:100%; object-fit:cover; display:block;">
+          <!-- subtle overlay -->
+          <div style="position:absolute; inset:0; background:linear-gradient(135deg, rgba(23,13,242,0.06) 0%, transparent 60%);"></div>
+        </div>
+
+        <!-- Floating pill (logo motif echo) -->
+        <div class="pill-float" style="position:absolute; left:-28px; top:50%; margin-top:-48px; width:18px; height:96px; background:#170DF2; border-radius:100px; opacity:0.92;"></div>
+        <!-- Pink dot (logo motif echo) -->
+        <div class="dot-float" style="position:absolute; left:-14px; top:38%; width:18px; height:18px; border-radius:50%; background:#FFADFF;"></div>
+
+        <!-- Floating label card — top right -->
+        <div class="card-float" style="position:absolute; top:20px; right:-28px; background:white; border-radius:18px; padding:14px 18px; box-shadow:0 8px 40px rgba(23,13,242,0.14); border:1px solid rgba(23,13,242,0.06);">
+          <!--<div style="font-family:'DM Sans',sans-serif; font-size:0.7rem; color:#888; margin-bottom:3px; font-weight:500;">Latest Project</div>
+          <div style="font-family:'Quicksand',sans-serif; font-size:0.9rem; font-weight:700; color:#170DF2;">Brand Identity ✦</div>-->
+        </div>
+
+        <!-- Floating stars card — bottom left -->
+        <div style="position:absolute; bottom:20px; left:-32px; background:white; border-radius:18px; padding:12px 16px; box-shadow:0 8px 40px rgba(23,13,242,0.12); border:1px solid rgba(23,13,242,0.06); display:flex; align-items:center; gap:10px;">
+           <!--<div style="font-size:1.2rem; line-height:1;">⭐</div>-->
+           <!-- <div>
+           <div style="font-family:'Quicksand',sans-serif; font-size:0.9rem; font-weight:700; color:#000;">5.0 Rating</div> 
+           <div style="font-family:'DM Sans',sans-serif; font-size:0.7rem; color:#888; margin-top:1px;">30+ reviews</div> 
+          </div>-->
+        </div>
+
+        <!-- Purple blob -->
+        <div style="position:absolute; right:-24px; bottom:40px; width:80px; height:80px; border-radius:50%; background:#AFACFB; opacity:0.35;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+    PROJECT 1
+══════════════════════════════════════ -->
+<section id="about" class="py-24 px-6 lg:px-12" style="background:#FFEBFF;">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+
+      <!-- Image -->
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="relative max-w-sm mx-auto lg:mx-0">
+          <!-- Tilt bg -->
+          <div style="position:absolute; inset:0; border-radius:28px; background:#AFACFB; opacity:0.25; transform:rotate(-3deg); top:12px; left:-12px;"></div>
+          <!-- Photo -->
+          <div style="border-radius:28px; overflow:hidden; position:relative; border:1px solid rgba(23,13,242,0.1);">
+            <img src="../images/Tufin-email-text-vs-banner-crop.png" alt="Email performance" style="width:100%; display:block;">
+          </div>
+          <!-- Pink accent -->
+          <div style="position:absolute; top:-18px; left:-18px; width:44px; height:44px; border-radius:50%; background:#FFADFF;"></div>
+          <!-- Pill accent -->
+          <div style="position:absolute; bottom:-18px; right:-10px; width:14px; height:60px; border-radius:100px; background:#170DF2; opacity:0.15; transform:rotate(-32deg);"></div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal order-1 lg:order-2">
+        <div class="chip mb-6">KPIs & Reporting</div>
+        <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em;">
+          Email Campaigns</span>
+        </h2>
+
+        <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
+		I architected global email campaigns targeting information security professionals at Global 2000 accounts at Tufin. I architected behavior-based and persona-based audience segmentation, executing global email campaigns across APAC, EMEA, and the Americas. I also implemented GDPR compliance frameworks across all regions and included A/B tests to boost open and conversion rates.
+	</p>
+	 
+       <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════
+    PROJECT 2
+══════════════════════════════════════ -->
+<section id="about" class="py-24 px-6 lg:px-12" style="background:#FFFFFF;">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+
+      
+
+      <!-- Text -->
+      <div class="reveal order-1 lg:order-1">
+        <div class="chip mb-6">Funnel Stages</div>
+        <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em;">
+          Lead Lifecycle</span>
+        </h2>
+
+        <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
+         At Tufin, I worked closely with sales leadership to define and agree on funnel stages and created Salesforce dashboards to measure marketing-sourced opportunities. 
+        </p>
+	 
+       <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
+      </div>
+	  
+	  <!-- Image -->
+      <div class="reveal relative order-2 lg:order-2">
+        <div class="relative max-w-sm mx-auto lg:mx-0">
+          <!-- Tilt bg -->
+          <div style="position:absolute; inset:0; border-radius:28px; background:#AFACFB; opacity:0.25; transform:rotate(-3deg); top:12px; left:-12px;"></div>
+          <!-- Photo -->
+          <div style="border-radius:28px; overflow:hidden; position:relative; border:1px solid rgba(23,13,242,0.1);">
+            <img src="../images/Tufin-Funnel.png" alt="Tufin funnel" style="width:100%; display:block;">
+          </div>
+          <!-- Pink accent -->
+          <div style="position:absolute; top:-18px; left:-18px; width:44px; height:44px; border-radius:50%; background:#FFADFF;"></div>
+          <!-- Pill accent -->
+          <div style="position:absolute; bottom:-18px; right:-10px; width:14px; height:60px; border-radius:100px; background:#170DF2; opacity:0.15; transform:rotate(-32deg);"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ══════════════════════════════════════
+    PROJECT 3
+══════════════════════════════════════ -->
+<section id="about" class="py-24 px-6 lg:px-12" style="background:#FFEBFF;">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+
+      <!-- Image -->
+      <div class="reveal relative order-2 lg:order-1">
+        <div class="relative max-w-sm mx-auto lg:mx-0">
+          <!-- Tilt bg -->
+          <div style="position:absolute; inset:0; border-radius:28px; background:#AFACFB; opacity:0.25; transform:rotate(-3deg); top:12px; left:-12px;"></div>
+          <!-- Photo -->
+          <div style="border-radius:28px; overflow:hidden; position:relative; border:1px solid rgba(23,13,242,0.1);">
+             <img src="../images/Tufin-lead-process.png" alt="Lead management process" style="width:100%; display:block;">
+          </div>
+          <!-- Pink accent -->
+          <div style="position:absolute; top:-18px; left:-18px; width:44px; height:44px; border-radius:50%; background:#FFADFF;"></div>
+          <!-- Pill accent -->
+          <div style="position:absolute; bottom:-18px; right:-10px; width:14px; height:60px; border-radius:100px; background:#170DF2; opacity:0.15; transform:rotate(-32deg);"></div>
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div class="reveal order-1 lg:order-2">
+        <div class="chip mb-6">Process Creation</div>
+        <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em;">
+          Lead Management</span>
+        </h2>
+
+        <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
+		I partnered with Tufin sales leadership to define MQLs, lead processes, lead scoring, and establish lead SLAs. This ensured leads were addressed promptly and sales and marketing teams were aligned.
+	</p>
+	 
+       <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+    PROJECT 4
+══════════════════════════════════════ -->
+<section id="about" class="py-24 px-6 lg:px-12" style="background:#FFFFFF;">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid lg:grid-cols-2 gap-16 xl:gap-24 items-center">
+
+
+      <!-- Text -->
+      <div class="reveal order-1 lg:order-1">
+        <div class="chip mb-6">Implementation & Migrations</div>
+        <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em;">
+          Marketing Automation Platforms</span>
+        </h2>
+
+        <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
+        I led the full migration from HubSpot to Adobe Marketo Engage. This involved managing the technical implementation, change management, and team enablement, establishing the global governance framework for campaign operations, lead scoring, and nurture programs that standardized marketing execution across regions. 
+        </p>
+	 
+       <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
+      </div>
+	  
+	  <!-- Image -->
+      <div class="reveal relative order-2 lg:order-2">
+        <div class="relative max-w-sm mx-auto lg:mx-0">
+          <!-- Tilt bg -->
+          <div style="position:absolute; inset:0; border-radius:28px; background:#AFACFB; opacity:0.25; transform:rotate(-3deg); top:12px; left:-12px;"></div>
+          <!-- Photo -->
+          <div style="border-radius:28px; overflow:hidden; position:relative; border:1px solid rgba(23,13,242,0.1);">
+            <img src="../images/marketo-hubspot-logo.png" alt="Marketo logo" style="width:100%; display:block;">
+          </div>
+          <!-- Pink accent -->
+          <div style="position:absolute; top:-18px; left:-18px; width:44px; height:44px; border-radius:50%; background:#FFADFF;"></div>
+          <!-- Pill accent -->
+          <div style="position:absolute; bottom:-18px; right:-10px; width:14px; height:60px; border-radius:100px; background:#170DF2; opacity:0.15; transform:rotate(-32deg);"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="py-28 px-6 lg:px-12 relative overflow-hidden" style="background:#170DF2;">
+
+  <!-- Decorative -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div style="position:absolute; top:-100px; right:-80px; width:480px; height:480px; border-radius:50%; background:rgba(255,255,255,0.05);"></div>
+    <div style="position:absolute; bottom:-120px; left:-60px; width:400px; height:400px; border-radius:50%; background:rgba(255,255,255,0.04);"></div>
+    <!-- Pill decorations echoing the logo -->
+    <div style="position:absolute; top:48px; right:20%; width:12px; height:52px; border-radius:100px; background:#FFADFF; opacity:0.25; transform:rotate(-32deg);"></div>
+    <div style="position:absolute; bottom:60px; left:18%; width:8px; height:36px; border-radius:100px; background:white; opacity:0.15; transform:rotate(20deg);"></div>
+    <div style="position:absolute; top:30%; left:8%; width:10px; height:44px; border-radius:100px; background:#AFACFB; opacity:0.2; transform:rotate(-20deg);"></div>
+    <!-- Dot -->
+    <div style="position:absolute; top:40px; left:35%; width:14px; height:14px; border-radius:50%; background:#FFADFF; opacity:0.4;"></div>
+  </div>
+
+  <div class="max-w-2xl mx-auto text-center reveal" style="position:relative;">
+
+    <div class="inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full" style="background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.15);">
+      <!--<span style="width:8px; height:8px; border-radius:50%; background:#FFADFF; display:inline-block;"></span>
+      <span style="font-family:'DM Sans',sans-serif; font-size:0.8rem; color:rgba(255,255,255,0.8); font-weight:600; letter-spacing:0.03em;">Open to new projects</span> -->
+    </div>
+
+    <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2.4rem,6vw,4rem); font-weight:800; line-height:1.05; letter-spacing:-0.03em; color:white;">
+      Let's create something<br>great together.
+    </h2>
+
+    <p style="font-family:'DM Sans',sans-serif; font-size:1.0625rem; line-height:1.72; color:rgba(255,255,255,0.72); margin-bottom:2.75rem;">
+     Currently exploring Senior Director, VP of Marketing and fractional CMO opportunities in B2B tech. Let's talk.</p>
+	 
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a href="mailto:info@moniquemacgillivray.com" class="btn-white">
+        Send Me an Email
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="#170DF2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="https://linkedin.com/in/moniquemacgillivray" target="_blank" rel="noopener noreferrer" class="btn-ghost-white">
+        Connect on LinkedIn
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════
+     FOOTER
+══════════════════════════════════════ -->
+<footer class="py-10 px-6 lg:px-12 bg-white" style="border-top:1px solid rgba(0,0,0,0.07);">
+  <div class="max-w-6xl mx-auto">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <a href="#" aria-label="Home">
+        <img src="../brand_assets/logo-blue-500x186.png" alt="Monique MacGillivray" style="height:32px; width:auto;">
+      </a>
+      <nav class="flex gap-6 flex-wrap justify-center">
+       <a href="index.html"     class="nav-link">Work</a>
+      <a href="../index.html#about"    class="nav-link">About</a>
+      <a href="../index.html#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+      </nav>
+      <p style="font-family:'DM Sans',sans-serif; font-size:0.8125rem; color:#aaa;">
+        © 2026 Monique MacGillivray
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ══════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════ -->
+<script>
+  // ── Scroll-reveal with stagger for sibling reveals ──
+  const revealEls = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  // Stagger siblings in the same grid parent
+  const grids = document.querySelectorAll('.grid');
+  grids.forEach(grid => {
+    const children = grid.querySelectorAll('.reveal');
+    children.forEach((child, i) => {
+      child.style.transitionDelay = `${i * 60}ms`;
+    });
+  });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  // ── Nav scroll effect ──
+  const navbar = document.getElementById('navbar');
+  const onScroll = () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 24);
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // ── Mobile menu ──
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  hamburger.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    hamburger.classList.toggle('open', isOpen);
+    hamburger.setAttribute('aria-expanded', isOpen);
+    mobileMenu.setAttribute('aria-hidden', !isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  function closeMobileMenu() {
+    mobileMenu.classList.remove('open');
+    hamburger.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+    mobileMenu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Close on outside click
+  document.addEventListener('click', (e) => {
+    if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+      closeMobileMenu();
+    }
+  });
+
+  // ── Smooth anchor offsets (account for fixed nav) ──
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (e) => {
+      const target = document.querySelector(link.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
