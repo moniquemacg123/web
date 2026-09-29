@@ -6,5 +6,6 @@ pink #FFADFF
 light pink #FFEBFF
 
 text color #000000
+hyperlink color #170DF2
 
 font-family:Arial,Helvetica,sans-serif;

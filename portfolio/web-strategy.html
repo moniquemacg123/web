@@ -248,6 +248,11 @@
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(23,13,242,0.55) 0%, transparent 55%);
     }
+    /* Inline text links */
+    p a:not([class]) { color: #170DF2; text-underline-offset: 3px; }
+    p a:not([class]):hover { opacity: 0.75; }
+    p a:not([class]):focus-visible { outline: 2px solid #170DF2; outline-offset: 2px; border-radius: 2px; }
+    p a:not([class]):active { opacity: 0.6; }
   </style>
 </head>
 <body>

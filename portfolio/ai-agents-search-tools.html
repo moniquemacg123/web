@@ -248,6 +248,11 @@
       position: absolute; inset: 0;
       background: linear-gradient(to top, rgba(23,13,242,0.55) 0%, transparent 55%);
     }
+    /* Inline text links */
+    p a:not([class]) { color: #170DF2; text-underline-offset: 3px; }
+    p a:not([class]):hover { opacity: 0.75; }
+    p a:not([class]):focus-visible { outline: 2px solid #170DF2; outline-offset: 2px; border-radius: 2px; }
+    p a:not([class]):active { opacity: 0.6; }
   </style>
 </head>
 <body>
@@ -331,7 +336,7 @@
         <!-- Badge -->
         <div class="anim-1 inline-flex items-center gap-2 mb-8 px-4 py-2 rounded-full" style="background:#FFEBFF; border:1px solid rgba(255,173,255,0.4);">
          <span class="w-2 h-2 rounded-full" style="background:#FFADFF; display:inline-block;"></span>
-          <span style="font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:600; color:#170DF2; letter-spacing:0.03em;">Artificial Intelligence Tools</span> 
+          <span style="font-family:'DM Sans',sans-serif; font-size:0.8rem; font-weight:600; color:#170DF2; letter-spacing:0.03em;">Artificial Intelligence Work</span> 
         </div>
 
         <!-- Headline -->
@@ -341,7 +346,7 @@
 
         <!-- Sub -->
         <p class="anim-3" style="font-family:'DM Sans',sans-serif; font-size:1.0625rem; line-height:1.75; color:#4a4a4a; max-width:480px; margin-bottom:2.5rem;">
-          I've built AI agents, leveraged AI-driven search tools, and implemented structured data to optimize content for AEO/GEO. 
+          I've built AI agents, leveraged AI-driven search tools, and implemented structured data to optimize content for AEO/GEO. I also built this website using Claude Code. 
         </p>
 
         <!-- CTAs -->
@@ -445,7 +450,7 @@
         </h2>
 
         <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
-         I built an AI Agent in Cassidy that autonomously responds to customer emails. It follows a multi-step process that queries a knowledge base containing brand guidelines and company information, then drafts an appropriate response. I tested across multiple LLMs for optimal performance and provided evals to  refine the output. Before sending, the agent routes each draft for human review, ensuring accuracy and quality control.
+         I built an AI Agent using <a href="https://www.cassidyai.com/" rel="noopener noreferrer" target="_blank">Cassidy</a> that autonomously responds to customer emails. It follows a multi-step process that queries a knowledge base containing brand guidelines and company information, then drafts an appropriate response. I tested across multiple LLMs for optimal performance and provided evals to  refine the output. Before sending, the agent routes each draft for human review, ensuring accuracy and quality control.
         </p>
 	 
        <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
@@ -474,7 +479,7 @@
         </h2>
 
         <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
-         I supported the implementation of Google Vertex AI, an AI-powered semantic search tool on Walmart's corporate website. Semantic search improves the search accuracy by understanding the context, intent, and semantic meaning behind a user's query, rather than relying solely on keyword matching. The previous search tool returned too many irrelevant and old news articles as it relied solely on keyword matching. I worked closely with the engineering team and created a training document with examples for the AI to learn from and performed extensive testing to tweak the relevancy thresholds to produce fewer recent and relevant results.
+         I supported the implementation of Google Vertex AI, an AI-powered semantic search tool on <a href="https://corporate.walmart.com/" target="_blank" rel="noopener noreferrer">Walmart's corporate website</a>. Semantic search improves the search accuracy by understanding the context, intent, and semantic meaning behind a user's query, rather than relying solely on keyword matching. The previous search tool returned too many irrelevant and old news articles as it relied solely on keyword matching. I worked closely with the engineering team and created a training document with examples for the AI to learn from and performed extensive testing to tweak the relevancy thresholds to produce fewer recent and relevant results.
         </p>
 	 
        <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
@@ -516,7 +521,7 @@
           <div style="position:absolute; inset:0; border-radius:28px; background:#AFACFB; opacity:0.25; transform:rotate(-3deg); top:12px; left:-12px;"></div>
           <!-- Photo -->
           <div style="border-radius:28px; overflow:hidden; position:relative; border:1px solid rgba(23,13,242,0.1);">
-            <img src="../images/mm-website-1.png" alt="Cassidy AI agent workflow" style="width:100%; display:block;">
+            <img src="../images/haro-pitch.jpg" alt="Stack of folded newspapers" style="width:100%; display:block;">
           </div>
           <!-- Pink accent -->
           <div style="position:absolute; top:-18px; left:-18px; width:44px; height:44px; border-radius:50%; background:#FFADFF;"></div>
@@ -529,11 +534,11 @@
       <div class="reveal order-1 lg:order-2">
         <div class="chip mb-6">Claude Code</div>
         <h2 class="font-display mb-6" style="font-family:'Quicksand',sans-serif; font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; letter-spacing:-0.025em;">
-          This Website</span>
+         Media Pitch Agent</span>
         </h2>
 
         <p style="font-family:'DM Sans',sans-serif; font-size:1rem; line-height:1.78; color:#333; margin-bottom:1.25rem;">
-         I used Claude Code to build this website template in minutes. I love learning how AI tools can help save time. 
+         I used the Anthropic API to build a <a href="https://github.com/moniquemacg123/media-pitch-agent" target="_blank" rel="noopener noreferrer">Media Pitch Agent</a> that turns daily HARO (Help a Reporter Out) journalist-query digests into ready-to-send media pitches. The agent filters out irrelevant queries, scores each opportunity for relevance on a 1–10 scale, and automatically drafts a pitch for opportunities that score 7 or higher.
         </p>
 	 
        <!-- <a href="#contact" class="btn-blue">Work With Me</a> -->
