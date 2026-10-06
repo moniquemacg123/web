@@ -1,0 +1,31 @@
+# Monique MacGillivray
+
+> Monique MacGillivray is a digital platforms, analytics, and AI leader who builds and scales the technology, digital experiences, and operations that help marketing and communications teams work smarter and connect their work to measurable business results. She works across startups and enterprise technology companies and is currently exploring new opportunities.
+
+Monique's background spans marketing technology (MarTech), web strategy, SEO and AI search optimization, analytics and reporting, and hands-on AI agent building. She has built digital marketing functions, led teams, and shaped MarTech and web strategies at enterprise technology companies including Walmart, Qlik, and Tufin. At Walmart she supported digital strategy, website technology, analytics, SEO, and AI search optimization across Corporate Communications and emerging B2B businesses. She builds AI agents and workflows using Claude Code, the Anthropic API, Cassidy AI, and n8n.
+
+Career highlight: grew the digital marketing function and advertising budget at Tufin, a network security software company, through its NYSE IPO.
+
+## Portfolio
+
+- [All work](https://moniquemacg.com/portfolio/): Overview of professional projects and experience.
+- [AI Agents & Search Tools](https://moniquemacg.com/portfolio/ai-agents-search-tools): Building AI agents, using AI-driven search tools, and implementing structured data to optimize sites for AEO/GEO (answer engine and generative engine optimization).
+- [Marketing Operations](https://moniquemacg.com/portfolio/marketing-operations): Scaling marketing operations, leading cross-functional alignment, and driving revenue growth through MarTech strategy.
+- [Web Strategy](https://moniquemacg.com/portfolio/web-strategy): Improving search visibility, leading redesign initiatives, and turning analytics into website strategy.
+- [Reporting & Measurement](https://moniquemacg.com/portfolio/analytics): Building KPI frameworks and reporting infrastructure that produce executive-ready insights.
+
+## Selected projects
+
+- [Improving Search Results](https://moniquemacg.com/portfolio/ai-agents-search-tools#proj2a): Supported the implementation of Google Vertex AI semantic search on Walmart's corporate website, contributing business logic, writing the model tuning document, and testing relevancy thresholds with engineering.
+- [Personalization](https://moniquemacg.com/portfolio/web-strategy#proj2w): Found that visitors often confused Walmart's corporate site with Walmart.com, then implemented a redirect that sends consumer-product queries to the ecommerce site.
+- [Creating Efficiency](https://moniquemacg.com/portfolio/ai-agents-search-tools#proj1a): Built an AI agent in Cassidy AI that drafts responses to customer emails.
+- [Digital Transformation Initiative](https://moniquemacg.com/portfolio/web-strategy#proj1w): Led a multi-year marketing technology transformation program at a global network security company to support growth.
+
+## Contact
+
+- [Email](mailto:info@moniquemacg.com)
+- [LinkedIn](https://linkedin.com/in/moniquemacgillivray)
+
+## Optional
+
+- [Home page](https://moniquemacg.com): Bio, testimonials from colleagues at Qlik, Tufin, and Walmart, and contact details.

@@ -1,0 +1,39 @@
+# robots.txt for moniquemacg.com
+# Allow all crawlers, including AI search and answer engines.
+
+User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google's AI features (Gemini, AI Overviews training/grounding control)
+User-agent: Google-Extended
+Allow: /
+
+# Uncomment and update if you have a sitemap:
+Sitemap: https://moniquemacg.com/sitemap.xml
