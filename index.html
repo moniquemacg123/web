@@ -271,11 +271,12 @@
     </a>
 
     <!-- Desktop links -->
-    <div class="hidden md:flex items-center gap-9">
-      <a href="portfolio/index.html"   role="navigation"  class="nav-link">Work</a>
-      <a href="#about" role="navigation"   class="nav-link">About</a>
-      <a href="#testimonials" role="navigation" class="nav-link">Testimonials</a>
-      <a href="#contact" role="navigation" class="nav-link">Contact</a>
+    <div class="hidden md:flex items-center gap-9"><nav aria-label="Primary">
+      <a href="portfolio/index.html"    class="nav-link">Work</a>
+      <a href="#about"   class="nav-link">About</a>
+      <a href="#testimonials" class="nav-link">Testimonials</a>
+      <a href="#contact"  class="nav-link">Contact</a>
+	  </nav>
     </div>
 
     <!-- Desktop CTA -->
@@ -296,10 +297,10 @@
 <!-- Mobile menu -->
 <div id="mobileMenu" class="mobile-menu fixed top-0 left-0 right-0 z-40 bg-white pt-24 pb-10 px-6" aria-hidden="true">
   <nav class="flex flex-col gap-1">
-    <a href="#services"  role="navigation"    class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Work</a>
-    <a href="#about"  role="navigation"    class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">About</a>
-    <a href="#testimonials" role="navigation"  class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Testimonials</a>
-    <a href="#contact" role="navigation"   class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
+    <a href="#services"    class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Work</a>
+    <a href="#about"    class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">About</a>
+    <a href="#testimonials"  class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200 border-b border-black/5" onclick="closeMobileMenu()">Testimonials</a>
+    <a href="#contact"   class="text-2xl font-display font-bold py-3 text-black hover:text-b-blue transition-colors duration-200" onclick="closeMobileMenu()">Contact</a>
   </nav>
   <a href="#contact" role="button" class="btn-blue mt-8 self-start" onclick="closeMobileMenu()">
     Let's Talk
@@ -755,11 +756,11 @@ She brings exceptional work ethic, rapid responsiveness, and a creative, solutio
       <a href="#" aria-label="Home">
         <img src="brand_assets/logo-blue-500x186.png" alt="Monique MacGillivray" style="height:32px; width:auto;">
       </a>
-      <nav class="flex gap-6 flex-wrap justify-center">
-        <a href="portfolio/index.html"   role="navigation"  class="nav-link" style="font-size:0.85rem;">Work</a>
-        <a href="#about"   role="navigation"    class="nav-link" style="font-size:0.85rem;">About</a>
-        <a href="#testimonials"  role="navigation"  class="nav-link" style="font-size:0.85rem;">Testimonials</a>
-        <a href="#contact"  role="navigation"   class="nav-link" style="font-size:0.85rem;">Contact</a>
+      <nav aria-label="Footer" class="flex gap-6 flex-wrap justify-center">
+        <a href="portfolio/index.html"   class="nav-link" style="font-size:0.85rem;">Work</a>
+        <a href="#about"      class="nav-link" style="font-size:0.85rem;">About</a>
+        <a href="#testimonials"   class="nav-link" style="font-size:0.85rem;">Testimonials</a>
+        <a href="#contact"   class="nav-link" style="font-size:0.85rem;">Contact</a>
       </nav>
       <p style="font-family:'DM Sans',sans-serif; font-size:0.8125rem; color:#aaa;">
         © 2026 Monique MacGillivray
